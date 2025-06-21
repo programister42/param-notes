@@ -35,6 +35,23 @@ Track AI-assisted development decisions and maintain context between AI sessions
 
 _(Most recent entries first)_
 
+### 21-06-2025 - Framework Decision: Next.js over TanStack Start
+
+**AI Model:** Claude-4-sonnet  
+**What was done:** Researched integration capabilities of Hono and tRPC with both TanStack Start and Next.js using Context7 MCP Server. Made decision to switch from TanStack Start to Next.js App Router for better ecosystem support.
+**AI Decision/Reasoning:** After comprehensive research of both frameworks' integration with our core backend technologies (Hono + tRPC), Next.js emerged as the clear winner due to: (1) Official Hono adapters for Next.js (hono/vercel, @hono/node-server/vercel), (2) Mature tRPC Next.js integration with extensive documentation and examples, (3) Full React Server Components support with tRPC prefetching, (4) Better PWA ecosystem (despite next-pwa maintenance issues, alternatives exist), (5) Production-proven stack used by many applications. TanStack Start lacks official adapters for both Hono and tRPC, requiring manual integration work.
+**Files changed:**
+
+- docs/PRD.md (updated tech stack from TanStack Start to Next.js App Router)
+- Created new branch feat/initialize-project-with-nextjs from main
+  **Next:** Initialize Next.js project with our chosen tech stack (Hono, tRPC, Better-Auth, Drizzle, Shadcn/ui)
+  **Context for next AI session:**
+- Switched to Next.js App Router for better Hono + tRPC integration
+- Previous TanStack Start work preserved in feat/project-initialization branch
+- Ready to initialize Next.js project with full tech stack
+- PWA will be implemented using Next.js compatible solutions
+- All other architectural decisions remain the same (PostgreSQL + pgvector, Better-Auth, Vercel AI SDK, etc.)
+
 ### 21-06-2025 - AI SDK Decision: Vercel AI SDK
 
 **AI Model:** Claude-4-sonnet  

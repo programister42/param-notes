@@ -149,8 +149,8 @@ Simplify the friction between quick thought capture and polished, well-structure
 #### 6.2.1 Frontend
 
 - **Framework**: React 19
-- **Meta-Framework**: TanStack Start
-- **Additional Libraries**: TanStack ecosystem products as needed
+- **Meta-Framework**: Next.js App Router
+- **State Management**: TanStack Query for server state, React hooks for local state
 - **Styling**: Shadcn/ui components with Tailwind CSS
 - **PWA Features**: Service workers, offline functionality, installable
 
