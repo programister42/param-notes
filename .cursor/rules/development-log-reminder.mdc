@@ -1,0 +1,23 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Development Log Reminder
+
+## Rule
+ALWAYS update `development-log.md` after significant AI interactions, feature implementations, or architectural decisions.
+
+## Requirements
+- Include AI model name in each entry
+- Brief description of what was done
+- Key decisions made by AI
+- List of files changed
+- Context for next AI session
+- Keep entries focused and concise
+
+## Purpose
+This is for AI context preservation between sessions, not detailed project documentation. Helps maintain continuity when switching between different AI assistants or sessions.
+
+## Entry Format
+Follow the format specified in `development-log.md` for consistency.
