@@ -35,6 +35,52 @@ Track AI-assisted development decisions and maintain context between AI sessions
 
 _(Most recent entries first)_
 
+### 21-06-2025 - AI SDK Decision: Vercel AI SDK
+
+**AI Model:** Claude-4-sonnet  
+**What was done:** Researched and decided between Google's official AI SDK (@google/genai) and Vercel AI SDK for ParamNotes implementation
+**AI Decision/Reasoning:** Chose Vercel AI SDK despite Google's official SDK being available due to: (1) Superior React integration with useChat/useCompletion hooks, (2) Built-in streaming UI components perfect for our typing suggestions feature, (3) Better developer experience and documentation discoverability, (4) Multi-model support for future flexibility, (5) Less boilerplate code for common React AI patterns. Google's SDK, while official and well-maintained, requires more manual React integration work.
+**Files changed:**
+
+- docs/PRD.md (added AI SDK specification)
+  **Context for next AI session:** Use Vercel AI SDK for all AI implementation. Focus on useCompletion for typing suggestions and useChat for RAG chat feature.
+
+### 21-06-2025 - RAG Architecture Clarification
+
+**AI Model:** Claude-4-sonnet  
+**What was done:** Clarified the relationship between RAG and vector databases in project documentation after user confusion about whether they're competing or complementary approaches
+**AI Decision/Reasoning:** Updated docs to clearly explain that RAG is the complete AI system (retrieval + generation) while vector database (PostgreSQL + pgvector) is the storage component that RAG uses. This prevents future confusion about the architecture.
+**Files changed:**
+
+- docs/database-schema.md (updated AI Context Management section with clear RAG architecture explanation)
+- docs/PRD.md (clarified Database & AI section to show RAG system uses PostgreSQL as vector database)
+
+**Next:** Ready to implement actual database schema files
+**Context for next AI:** Documentation now clearly explains that:
+
+- Vector Database = Storage system (PostgreSQL + pgvector in our case)
+- RAG = Complete AI system that uses vector database for retrieval + Gemini for generation
+- They work together, not as competing approaches
+- Our approach: Single PostgreSQL database with pgvector extension for cost-effectiveness and simplicity
+
+### 21-06-2025 - Database Schema Design
+
+**AI Model:** Claude-4-sonnet  
+**What was done:** Researched Better-Auth, Drizzle ORM, tRPC, and Hono documentation via Context7 MCP Server, then designed comprehensive database schema
+**AI Decision/Reasoning:** Used Context7 to get up-to-date documentation for all key technologies to ensure schema design follows best practices. Designed offline-first architecture with sync management, AI context tables for embeddings and chat, and Better-Auth integration
+**Files changed:**
+
+- docs/database-schema.md (comprehensive schema with all tables, relationships, indexes, and migration strategy)
+
+**Next:** Ready to implement the actual Drizzle schema files and set up the database structure
+**Context for next AI:** Database schema is now fully designed with:
+
+- Authentication tables (Better-Auth): user, session, account, verification
+- Notes management: notes, note_folders, note_folder_items with offline sync support
+- AI context: ai_context_embeddings, ai_chat_sessions, ai_chat_messages
+- Sync management: sync_queue, sync_conflicts for offline/online synchronization
+- All relationships, indexes, and migration strategies documented
+
 ### 21-06-2025 - Comprehensive PRD Creation
 
 **AI Model:** Claude-4-sonnet  

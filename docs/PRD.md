@@ -163,9 +163,11 @@ Simplify the friction between quick thought capture and polished, well-structure
 
 #### 6.2.3 Database & AI
 
-- **Database**: Neon PostgreSQL
-- **AI Context**: RAG (Retrieval-Augmented Generation) for context awareness
-- **AI Model**: Google Gemini Flash (with future support for additional models)
+- **Database**: Neon PostgreSQL with pgvector extension
+- **Vector Storage**: PostgreSQL serves as the vector database component for storing note embeddings
+- **RAG System**: Complete Retrieval-Augmented Generation system that uses the vector database to find relevant notes and generate context-aware responses
+- **AI Model**: Google Gemini Flash for both embeddings and text generation
+- **AI SDK**: Vercel AI SDK for React integration, streaming UI components, and multi-model support
 
 ### 6.3 Offline & Synchronization Strategy
 
