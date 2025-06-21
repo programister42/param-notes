@@ -1,0 +1,31 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Always Read Development Log
+
+## Rule
+ALWAYS read and reference the `development-log.md` file at the start of any AI session to understand the current project context, previous decisions, and what has been accomplished.
+
+## Requirements
+- Read the entire development log before making any suggestions or starting work
+- Pay special attention to the Quick Notes section for user preferences and guidelines
+- Reference previous AI decisions and context when relevant
+- Understand the current project phase and what has been completed
+- Build upon previous work rather than starting from scratch
+- Maintain continuity between different AI sessions
+
+## Purpose
+This prevents re-explaining context and maintains continuity between AI interactions. The development log contains:
+- Current project context and phase
+- Quick Notes section with user preferences and important guidelines
+- Previous AI decisions and reasoning
+- Files that have been changed
+- Important context for future sessions
+
+## Implementation
+- Start every session by reading `development-log.md`
+- Reference relevant previous entries when making decisions
+- Add new entries to the log after significant work
+- Keep the log updated with latest context

@@ -13,6 +13,7 @@ Track AI-assisted development decisions and maintain context between AI sessions
 
 ## Quick Notes
 
+- **ALWAYS read this development log for context before starting any work**
 - User prefers simple solutions over complex ones
 - Keep this log focused on AI context, not project management
 - Track which AI models work best for different tasks
