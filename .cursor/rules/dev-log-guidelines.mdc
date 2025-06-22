@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Always reference and update the development log (`dev-log.md`) as part of your workflow.
+
+1. **Read-on-Start:** At the beginning of each session or task, open and review `dev-log.md` to understand recent decisions and context.
+2. **Add Entries:** After significant changes, decisions, or at logical breakpoints, append a new entry to `dev-log.md` using the structured format:
+   - **Timestamp:** use  `mcp_param-date-mcp_get-current-datetime` + `mcp_param-date-mcp_format-date(date, 'dd.MM.yyy (HH:mm)')`
+   - **Author/Agent:** your identifier (e.g., `o4-mini`)
+   - **Type:** Decision, Change, Issue, or Note
+   - **Summary:** one-line title
+   - **Reasoning / Context:** why it was done
+   - **Impact:** affected modules (optional)
+   - **Next Steps:** upcoming tasks
+
+By following this rule, AI agents maintain context continuity and clear audit trails of development.
